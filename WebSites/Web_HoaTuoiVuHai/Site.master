@@ -1,0 +1,287 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="SiteMaster" %>
+
+<%@ Register src="Controls/Banner.ascx" tagname="Banner" tagprefix="uc1" %>
+<%@ Register src="Controls/Menu.ascx" tagname="Menu" tagprefix="uc2" %>
+<%@ Register src="Controls/CuoiTrang.ascx" tagname="CuoiTrang" tagprefix="uc3" %>
+<%@ Register src="Controls/TH_DangNhap.ascx" tagname="TH_DangNhap" tagprefix="uc4" %>
+<%@ Register src="Controls/loadGioHang.ascx" tagname="loadGioHang" tagprefix="uc6" %>
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head id="Head1" runat="server">
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 93%;
+        }
+        .style2
+        {}
+        .style3
+        {
+            width: 96%;
+            height: 54px;
+        }
+        .style4
+        {
+            width: 99%;
+        }
+        .style5
+        {
+            width: 193px;
+        }
+        .style7
+        {
+            width: 193px;
+            color: #FFFFCC;
+            margin-right: 6px;
+        }
+        .style8
+        {
+            width: 94%;
+        }
+        .style9
+        {
+            width: 238px;
+        }
+        .style10
+        {
+            font-size: large;
+            color: #0000CC;
+        }
+        .style11
+        {
+            width: 50px;
+        }
+        .style12
+        {
+            font-size: large;
+            color: #0000CC;
+            width: 614px;
+        }
+        </style>
+</head>
+<body background="HinhChucNang/Anhnen.jpg" >
+    <form id="Form1" runat="server">
+    <div class="page">
+        <div class="clear" align="center">
+            <table align="center" cellpadding="0" cellspacing="0" class="style1" 
+                bgcolor="White">
+                <tr>
+                    <td colspan="3" align="center" style="background-color: #99FF33">
+                        <div class="clear" align="center" style="width: 905px; height: 222px">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <uc1:Banner ID="Banner1" runat="server" />
+                        </div>
+                    &nbsp;</td>
+                </tr>
+                <tr>
+                    <td colspan="3" >
+                        <uc2:Menu ID="Menu6" runat="server" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="style2" width="200px" style="vertical-align:top">
+                        <table cellpadding="1" cellspacing="10" class="style3">
+                            <tr>
+                                <td class="style7">
+                                    <table cellpadding="0" cellspacing="0" class="style3" width="203px">
+                                        <tr>
+                                            <td align="center"                                              
+                                                style="width: 206px; height: 33px; background-image: url('/Web_HoaTuoiVuHai/HinhChucNang/HinhControls.jpg'); color: #FF0066; font-weight: 700; font-family: Arial; font-size: small;">
+                                                GIỚI THIỆU</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <asp:Menu ID="Menu2" runat="server" style="font-size: medium">
+                                                    <Items>
+                                                        <asp:MenuItem Text="Lịch sử hình thành" Value="Lịch Sử Hình Thành" 
+                                                            NavigateUrl="~/LichSuHinhThanh.aspx">
+                                                        </asp:MenuItem>
+                                                    </Items>
+                                                </asp:Menu>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="style7">
+                                    <table cellpadding="0" cellspacing="0" class="style3">
+                                        <tr>
+                                            <td align="center"                                                                                                                                       
+                                              style="width: 206px; height: 33px; background-image: url('/Web_HoaTuoiVuHai/HinhChucNang/HinhControls.jpg'); color: #FF0066; font-family: Arial; font-weight: 700; font-size: small;">
+                                                DANH MỤC SẢN PHẨM</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <asp:Menu ID="Menu7" runat="server" 
+                                                    style="font-size: medium; text-align: left;">
+                                                    <Items>
+                                                        <asp:MenuItem NavigateUrl="~/TrangSanPham.aspx?MaHang=1" Text="Hoa Cưới" 
+                                                            Value="Hoa Cưới"></asp:MenuItem>
+                                                        <asp:MenuItem NavigateUrl="~/TrangSanPham.aspx?MaHang=2" Text="Hoa Sinh Nhật" 
+                                                            Value="Hoa Sinh Nhật"></asp:MenuItem>
+                                                        <asp:MenuItem NavigateUrl="~/TrangSanPham.aspx?MaHang=3" Text="Hoa Hội Nghị" 
+                                                            Value="Hoa Hội Nghị"></asp:MenuItem>
+                                                        <asp:MenuItem NavigateUrl="~/TrangSanPham.aspx?MaHang=4" Text="Hoa Chúc Mừng" 
+                                                            Value="Hoa Chúc Mừng"></asp:MenuItem>
+                                                        <asp:MenuItem NavigateUrl="~/TrangSanPham.aspx?MaHang=6" Text="Xe Hoa" 
+                                                            Value="Xe Hoa"></asp:MenuItem>
+                                                        <asp:MenuItem NavigateUrl="~/TrangSanPham.aspx?MaHang=5" Text="Hoa Tang" 
+                                                            Value="Hoa Tang"></asp:MenuItem>
+                                                    </Items>
+                                                </asp:Menu>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="style7">
+                                    <table cellpadding="0" cellspacing="0" class="style8">
+                                        <tr>
+                                            <td align="center" 
+                                                
+                                                style="width: 206px; height: 33px; background-image: url('/Web_HoaTuoiVuHai/HinhChucNang/HinhControls.jpg'); color: #FF0066; font-weight: 700; font-family: Arial; font-size: small;">
+                                                DICH VỤ</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <asp:Menu ID="Menu8" runat="server" style="font-size: medium">
+                                                    <Items>
+                                                        <asp:MenuItem NavigateUrl="~/HuongDanMuaHang.aspx" Text="Hướng dẫn mua hàng" 
+                                                            Value="Hướng dẫn mua hàng và thanh toán"></asp:MenuItem>
+                                                    </Items>
+                                                </asp:Menu>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="style7">
+                                    <table cellpadding="0" cellspacing="0" class="style3">
+                                        <tr>
+                                            <td>
+                                                <table cellpadding="0" cellspacing="0" class="style4">
+                                                    <tr>
+                                                        <td align="center" 
+                                                            
+                                                            
+                                                            
+                                                            style="width: 206px; height: 33px; background-image: url('/Web_HoaTuoiVuHai/HinhChucNang/HinhControls.jpg'); color: #FF0066; font-family: Arial; font-weight: 700; font-size: small;">
+                                                            TIN TỨC</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <asp:Menu ID="Menu5" runat="server" style="font-size: medium">
+                                                                <Items>
+                                                                    <asp:MenuItem Text="Ý nghĩa các loài hoa" Value="Ý nghĩa các loài hoa" 
+                                                                        NavigateUrl="~/YNghiaHoa.aspx"></asp:MenuItem>
+                                                                </Items>
+                                                            </asp:Menu>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center" class="style7" width="100%">
+                                    <asp:Image ID="Image1" runat="server" ImageUrl="~/HinhChucNang/dathoa.jpg" 
+                                        Width="100%" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="style7" align="center"> <a href='http://google.com.vn'>
+                                    <asp:Image ID="Image3" runat="server" ImageUrl="~/HinhChucNang/up_ver1.jpg" 
+                                        Width="188px" Height="439px" /></a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td align="center" class="style12"  style="vertical-align:top">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                    <td class="style10"  style="vertical-align:top"  >
+                        <table cellpadding="1" cellspacing="10" class="style3" width="200px">
+                            <tr>
+                                <td style="font-size: medium" class="style9">
+
+                                    <uc4:TH_DangNhap ID="TH_DangNhap1" runat="server" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td bgcolor="#66FF33" style="font-size: medium" class="style9">
+
+<table cellpadding="1" cellspacing="1" class="style1">
+    <tr>
+        <td align="center" colspan="2" 
+            style="color: #FF0066; width: 206px; height: 33px; background-image: url('/Web_HoaTuoiVuHai/HinhChucNang/HinhControls.jpg');">
+            TÌM KIẾM</td>
+    </tr>
+    <tr>
+        <td align="right" class="style11">
+            <asp:Label ID="Label1" runat="server" Text="Giá từ:"></asp:Label>
+        </td>
+        <td align="left">
+            <asp:TextBox ID="txtGiaTu" runat="server" Width="123px"></asp:TextBox>
+        </td>
+    </tr>
+    <tr>
+        <td align="right" class="style11">
+            <asp:Label ID="Label2" runat="server" Text="Đến:"></asp:Label>
+        </td>
+        <td align="left">
+            <asp:TextBox ID="txtGiaDen" runat="server" Width="123px"></asp:TextBox>
+        </td>
+    </tr>
+    <tr>
+        <td class="style11">
+            &nbsp;</td>
+        <td align="left">
+            <asp:Button ID="btntimKiem" runat="server" Text="Tìm Kiếm" 
+                onclick="btntimKiem_Click" />
+        </td>
+    </tr>
+</table>
+                      </td>
+                            </tr>
+                            <tr>
+                                <td align="center" class="style9"> <a href='http://google.com.vn'> 
+                                    <asp:Image ID="Image4" runat="server" Height="472px" 
+                                        ImageUrl="~/HinhChucNang/mc.jpg" Width="197px" /></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center" class="style9"> <a href='http://google.com.vn'>
+                                    <asp:Image ID="Image2" runat="server" ImageUrl="~/HinhChucNang/anhcuoi.gif" 
+                                        Width="216px" /></a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <uc3:CuoiTrang ID="CuoiTrang1" runat="server" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="footer">
+        
+    </div>
+    </form>
+</body>
+</html>

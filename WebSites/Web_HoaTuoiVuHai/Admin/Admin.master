@@ -1,0 +1,80 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Admin.master.cs" Inherits="SiteMaster" %>
+<%@ Register src="Controls2/MenuAdmin.ascx" tagname="MenuAdmin" tagprefix="uc7" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head id="Head1" runat="server">
+    <title></title>
+     <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 958px;
+        }
+        .style2
+        {}
+        .style3
+        {
+            width: 100%;
+        }
+        .style5
+        {
+            text-decoration: none;
+        }
+        </style>
+</head>
+<body background="../HinhChucNang/Anhnen.jpg">
+    <form id="Form1" runat="server">
+    <div class="page">
+        <div class="clear">
+            <table align="center" cellpadding="0" cellspacing="0" class="style1" 
+                bgcolor="#FFFF99">
+                <tr>
+                    <td colspan="3">
+                        <div class="header" align="center" 
+                            style="width: 600px; height: 73px; background-image: url('/Web_HoaTuoiVuHai/Admin/HinhControls/Admin.jpg')">
+                        </div>
+                        <table cellpadding="0" cellspacing="0" class="style3">
+                            <tr>
+                                <td width="200px">
+                                    &nbsp;</td>
+                                <td>
+                                    &nbsp;</td>
+                                <td align="left" style="color: #FF0000; font-size: large;" width="200px">
+                                    <asp:Label ID="lblLoiChao" runat="server"></asp:Label>
+                                &nbsp;<asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/TrangChu.aspx" 
+                                        CssClass="style5">Thoát</asp:HyperLink>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <uc7:MenuAdmin ID="MenuAdmin1" runat="server" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="style2" width="200px" style="vertical-align:top">
+                        &nbsp;</td>
+                    <td align="center" class="style2" width="558px">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                    <td class="style2" width="200px"style="vertical-align:top">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        &nbsp;</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="footer">
+        
+    </div>
+    </form>
+</body>
+</html>
