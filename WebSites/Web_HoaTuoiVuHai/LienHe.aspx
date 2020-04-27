@@ -34,8 +34,8 @@ p.MsoListParagraph
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <span class="style13">Shop hoa tươi Vũ Hải
     <br />
-    Địa chỉ: Đường 30/4 – P. Phú Hòa - TP. Thủ Dầu Một – Bình Dương.<br />
-&nbsp;Điện thoại: 0979 879 533&nbsp; - Website: www.hoatuoivuhai.com</span>
+    Địa chỉ: Trường đại học Khoa Học Tự Nhiên<br />
+&nbsp;Điện thoại: 0947232718&nbsp; - Website: www.hoatuoivuhai.com</span>
         <asp:Image ID="Image2" runat="server" Height="436px" 
             ImageUrl="~/HinhChucNang/LienHe.jpg" Width="469px" />
         <v:imagedata src="file:///C:\Users\NHUTNAM\AppData\Local\Temp\msohtmlclip1\01\clip_image001.jpg"
